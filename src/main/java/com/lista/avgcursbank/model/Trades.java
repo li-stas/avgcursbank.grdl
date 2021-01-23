@@ -11,7 +11,7 @@ public class Trades {
     private static final transient String ERROR_STATUS = "error";
     private static final transient int AUTH_FAILURE = 102;
 
-    private List<AO_trade> trades ;
+    private List<AO_trade> trades;
     private String status;
     private int code;
 
@@ -33,8 +33,8 @@ public class Trades {
      * @return
      */
     public String[] cTrade2aTrade(String cTrade) {
-        cTrade = cTrade.replace("[","");
-        cTrade = cTrade.replace("]",",");
+        cTrade = cTrade.replace("[", "");
+        cTrade = cTrade.replace("]", ",");
         String[] aTTrade = cTrade.split("},");
         for (int i = 0; i < aTTrade.length; i++) {
             aTTrade[i] += "}";
