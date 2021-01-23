@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.3.0.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+}
+
+group 'com.lista'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    compileOnly "org.springframework.boot:spring-boot-configuration-processor"
+
+    /*  <!-- Swagger 2 Doc Dependency -->  */
+    implementation "io.springfox:springfox-swagger2:2.9.2"
+    implementation "io.springfox:springfox-swagger-ui:2.9.2"
+
+    /* spring-data-jpa */
+    implementation "org.postgresql:postgresql:42.2.10"            
+    implementation "com.zaxxer:HikariCP"
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa"
+
+    // https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api
+    //compile group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+    implementation "javax.persistence:javax.persistence-api:2.2"
+    // https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
+    //compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.2'
+    implementation "org.apache.httpcomponents:httpclient:4.5"
+
+}
