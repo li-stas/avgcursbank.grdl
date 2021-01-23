@@ -42,8 +42,12 @@ public class Json2Trade01Converter implements Converter<String, Trades> {
                 oTrade.setId_bank(1);
                 oTrade.setName_bank("MonoBank");
 
-                oTrade.setRateBuy(BigDecimal.valueOf((Double) mapTrade.get("rateBuy")));
-                oTrade.setRateSell(BigDecimal.valueOf((Double) mapTrade.get("rateSell")));
+                oTrade.setRateBuy(new BigDecimal( ((Number) mapTrade.get("rateBuy")).doubleValue()));
+                oTrade.setRateBuy(new BigDecimal( ((Number) mapTrade.get("rateSell")).doubleValue()));
+                /*oTrade.setRateBuy(BigDecimal.valueOf(((Number) mapTrade.get("rateBuy")).doubleValue()));
+                oTrade.setRateBuy(BigDecimal.valueOf(((Number) mapTrade.get("rateSell")).doubleValue()));*/
+                /*oTrade.setRateBuy(BigDecimal.valueOf((Double) mapTrade.get("rateBuy")));
+                oTrade.setRateSell(BigDecimal.valueOf((Double) mapTrade.get("rateSell")));*/
 
                 switch ((Integer) mapTrade.get("currencyCodeA")) {
                     case 840: //"USD":
