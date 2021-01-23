@@ -4,7 +4,6 @@ import com.lista.avgcursbank.model.Trades;
 import com.lista.avgcursbank.model.services.ScheduledTasksCron;
 import com.lista.avgcursbank.model.services.TradeAvgAll;
 import com.lista.avgcursbank.model.services.TradeAvgPeriod;
-import com.lista.avgcursbank.repository.AO_tradeRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
