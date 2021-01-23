@@ -165,7 +165,7 @@ public class BankLookupServiceImp implements BankLookupService { //implements Si
                         HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
                         });
         String result = rateResponse.getBody();
-        System.out.println(result.toString());
+        System.out.println(result);
         return result;
     }
 

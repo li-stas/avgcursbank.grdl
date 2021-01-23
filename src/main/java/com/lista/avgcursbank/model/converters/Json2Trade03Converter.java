@@ -30,15 +30,6 @@ public class Json2Trade03Converter implements Converter<String, Trades> {
         Trades oTrades = new Trades(); // список курсов банка
         String[] aTTrade = oTrades.cTrade2aTrade(cTrade);
 
-        /*cTrade = cTrade.replace("[","");
-        cTrade = cTrade.replace("]",",");
-        String[] aTTrade = cTrade.split("},");
-        for (int i = 0; i < aTTrade.length; i++) {
-            aTTrade[i] += "}";
-        }
-
-        Trades oTrades = new Trades(); // список курсов банка*/
-
         for (String s : aTTrade) {
 
             Map<String, Object> mapTrade = jsonStr2ObjMap.getStringObjectMap(s);
